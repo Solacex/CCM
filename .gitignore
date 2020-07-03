@@ -1,0 +1,23 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+!*.py
+*$py.class
+*.pth
+*.png
+*.pyc
+*.txt
+*.csv
+*.tar
+*.zip
+*.tar.gz
+*.json
+
+snapshot/
+result/
+log/
+vis/
+miou_result/
+past/
+v1/
+
