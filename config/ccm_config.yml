@@ -67,7 +67,7 @@ scale_max: 1.5
 rec: False
         
 # Model hypers
-init_weight: './best_bn.pth'
+init_weight: './gta5_source_only.pth'
 restore_from: None
 
 snapshot: '../Data/snapshot/'
