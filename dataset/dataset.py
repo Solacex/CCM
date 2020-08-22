@@ -9,10 +9,10 @@ import torchvision.transforms.functional as TF
 
 IMG_MEAN = np.array((104.00698793, 116.66876762, 122.67891434), dtype=np.float32)
 
-def init_concat_dataset(cfg, env, plabel_path=None,source_plabel_path=None, selected=None, centroid=None, wei_path=None,fuse=False, target_selected=None, source_list='none', target_list='none'):
-    source_env = env[cfg.source]
-    target_env = env[cfg.target]
-    cfg.num_classes=19
+def init_concat_dataset(cfg, plabel_path=None,source_plabel_path=None, selected=None, centroid=None, wei_path=None,fuse=False, target_selected=None, source_list='none', target_list='none'):
+    source_env = cfg[cfg.source]
+    target_env = cfg[cfg.target]
+    cfg.num_classes=cfg.num_classes
     cfg.source_size = source_env.input_size
     cfg.target_size = target_env.input_size
     cfg.source_data_dir  = source_env.data_dir
@@ -87,9 +87,9 @@ def init_concat_dataset(cfg, env, plabel_path=None,source_plabel_path=None, sele
     return mix_trainloader, cfg    
 
 
-def init_source_dataset(cfg, env, plabel_path=None, selected=None, fuse=False, source_list=None):
-    source_env = env[cfg.source]
-    target_env = env[cfg.target]
+def init_source_dataset(cfg, plabel_path=None, selected=None, fuse=False, source_list=None):
+    source_env = cfg[cfg.source]
+    target_env = cfg[cfg.target]
     if cfg.source=='synthia':
         cfg.num_classes=16
     else:
