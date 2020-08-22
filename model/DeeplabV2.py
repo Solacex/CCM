@@ -140,15 +140,6 @@ class ResNet(nn.Module):
             if isinstance(m, nn.Conv2d):
                 n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
                 m.weight.data.normal_(0, 0.01)
-            '''
-            elif isinstance(m, nn.BatchNorm2d):
-                m.weight.data.fill_(1)
-                m.bias.data.zero_()
-            '''
-                #        for i in m.parameters():
-                #            i.requires_grad = False
-    #    self.net = nn.Sequential(self.conv1, self.relu, self.maxpool, self.layer1,self.layer2,self.layer3,self.layer4,self.layer5)
-     #   self.net2 = SublinearSequential(*list(self.net.children()))
     def _make_layer(self, block, planes, blocks, stride=1, dilation=1):
         downsample = None
         if stride != 1 or self.inplanes != planes * block.expansion or dilation == 2 or dilation == 4:
@@ -180,9 +171,7 @@ class ResNet(nn.Module):
         x = self.layer4(x)
         x1 = self.layer5(x)
         x1 = F.interpolate(x1, (H, W), mode='bilinear', align_corners=True)
-#        x1 = self.layer6(x)
-      #  x2 = self.layer6(x)
-        return x1#, x2
+        return x1
 
     def get_1x_lr_params_NOscale(self):
         """

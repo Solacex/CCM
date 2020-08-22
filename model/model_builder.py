@@ -39,10 +39,14 @@ def init_model(cfg):
         else:
             new_params = model.state_dict().copy()
             for i in params:
-                i_parts = i.split('.')[0]
-                if not i_parts == 'layer5':
+                if 'module' in i:
+                    i_ = i.replace('module.', '')
+                    new_params[i_] = params[i]
+                else:
                     new_params[i] = params[i]
+#                i_parts = i.split('.')[0]
             model.load_state_dict(new_params, strict=True)
+#            model.load_state_dict(params, strict=True)
 
     if cfg.restore_from != 'None':
         params = torch.load(cfg.restore_from)
