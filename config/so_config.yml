@@ -23,8 +23,8 @@ round: 6
 print_freq: 1
 save_freq: 2000
 tensorboard: False
-neptune: True
-screen: False
+neptune: False
+screen: True
 val: True
 val_freq: 300
 
