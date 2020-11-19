@@ -24,7 +24,7 @@ def main():
     cudnn.benchmark = True
     torch.backends.cudnn.deterministic = True
 
-    config, writer = init_config("config/final_config.yml", sys.argv)
+    config, writer = init_config("config/ccm_config.yml", sys.argv)
 
     config.num_classes = 19
 
