@@ -60,10 +60,12 @@ If you use this code, please cite:
 
 ```
 @inproceedings{li2020content,
-  title={Content-Consistent Matching for Domain Adaptive Semantic Segmentation},
-  author={Li, Guangrui Kang, Guoliang Liu, Wu Wei, Yunchao and Yang, Yi},
-  booktitle={European Conference on Computer Vision (ECCV)},
-  year={2020}
+  title={Content-consistent matching for domain adaptive semantic segmentation},
+  author={Li, Guangrui and Kang, Guoliang and Liu, Wu and Wei, Yunchao and Yang, Yi},
+  booktitle={European Conference on Computer Vision},
+  pages={440--456},
+  year={2020},
+  organization={Springer}
 }
 ```
 
