@@ -56,7 +56,7 @@ python eval.py --frm model.pth --single
 
 ## Citation 
 
-If you use this code, please cite: 
+If you find it helpful, please consider citing: 
 
 ```
 @inproceedings{li2020content,
