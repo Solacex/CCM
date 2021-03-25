@@ -21,6 +21,7 @@ class Pool(object):
                 self.cnts[key] = cnts[key]
             else:
                 past_cnt = self.cnts[key]
+                self.cnts[key] += cnts[key]
                 self.pool[key] = (self.pool[key]*past_cnt+ vec*cnts[key])/float(past_cnt+cnts[key])
 
 
