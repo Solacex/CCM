@@ -3,7 +3,8 @@
 This is a PyTorch implementation of [CCM](http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590426.pdf).  
 
 
-News: [GTA-4K]() list is avalible! A smaller subset of GTA5 dataset that shares higher layout similarites with Cityscapes. 
+### News: [GTA-4K]() list is avalible! 
+A smaller subset of GTA5 dataset that shares higher layout similarites with Cityscapes. 
 
 
 ### Prerequisites
